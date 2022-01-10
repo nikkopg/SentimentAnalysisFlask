@@ -5,10 +5,10 @@ import string
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 from nltk.tokenize import word_tokenize
-# from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 
 sastrawi = StopWordRemoverFactory()
-stopword_list = sastrawi.get_stop_words()
+stopword_list = ' '.join(stopwords.words('indonesian') + sastrawi.get_stop_words())
 stopword_list = word_tokenize(stopword_list)
 stopword_list.remove('tidak') # remove 'tidak' from stopword since it may be related to negative sentiment
 stopword_list.remove('tidak')
