@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>
+    Deploy-test
+</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <form class="contact-form validate-form" action='/' method="GET">
+            <center>
+                <span class="label-input100">Your review's sentiment tends to be:</span>
+            </center>
+            <span class="contact100-form-title">
+                {{ prediction }}
+            </span>
+        
+            <div class="container-contact100-form-btn">
+                <div class="wrap-contact100-form-btn">
+                    <div class="contact100-form-bgbtn"></div>
+                    <button class="contact100-form-btn">
+                        <span>
+                            I want more!
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
