@@ -1,6 +1,5 @@
-# SentimentAnalysisFlask
+# Sentiment Analysis Flask & Heroku
 
 An exercise to deploy a Sentiment Analysis model using Flask and Heroku.
 
-Accessible through:
-> sentimentpred.herokuapp.com
+Accessible through [this link](sentimentpred.herokuapp.com).
