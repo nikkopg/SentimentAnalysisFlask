@@ -3,6 +3,7 @@ import joblib
 from preprocessText import *
 
 app = Flask(__name__, template_folder='template')
+model = joblib.load('review-sentiment_rs-xgboost.pkl')
 dicts = {
     0: 'Negative',
     1: 'Positive'
@@ -11,7 +12,6 @@ dicts = {
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        model = joblib.load('review-sentiment_rs-xgboost.pkl')
         input_text = request.form['input_text']
         _, _, preprocessed_text = preprocess_text(input_text)
 
